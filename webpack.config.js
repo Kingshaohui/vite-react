@@ -33,6 +33,19 @@ module.exports = {
     filename: "[name]-[contenthash].js",
     publicPath: "/",
   },
+  devServer: {
+    // 开发环境热更新
+    historyApiFallback: true, // 路由匹配,没有找到路由就显示入口文件
+    static: path.join(__dirname, "./build"),
+    open: true,
+    // noInfo: true,
+    hot: true,
+    // quiet: true, // 避免不必要的信息打印在控制台
+    port: 8082, // 端口号
+    // inline: true, // 实时刷新
+    // liveReload: false, // 重新加载/刷新页面
+    // publicPath: '/', // 公共路径 打包后资源可以访问的路径
+  },
   plugins: [
     manifestPlugin,
     webpackbar,

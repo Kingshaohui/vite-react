@@ -1,6 +1,0 @@
-@font-face {
-  font-family: 'SourceHanSansCN-Regular';
-  src: url('./SourceHanSansCN-Regular.otf') format('otf');
-  /* font-display: swap; */
-  font-display: fallback;
-}
